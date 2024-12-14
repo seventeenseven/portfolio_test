@@ -1,0 +1,201 @@
+<!--
+Analyse des besoins
+1- Projet de portfolio 
+    - Presentation (Introduction, une photo)
+    - Realisations (projets, Liens externes)
+    - Contact (formulaires de contact, liens reseaux sociaux)
+2- Selectionner le design
+    - la disposition des elements. Utiliser figma
+    - le theme du site (les couleurs, 3 couleurs max)
+    - police du texte
+-->
+
+<!DOCTYPE html>
+<!-- Indique le debut de ma page web  -->
+<html lang="en"> 
+<!-- Debut de l'en-tete de ma page web  -->
+<head>
+    <meta charset='utf-8'> <!-- Ceci indique l'encodage de ma page web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn front-end web development with a professional touch.">
+    <meta name="author" content="Instructor Jane">
+    <title>Front-End Development Bootcamp</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'> <!-- Style externe --> 
+    <script src='main.js'></script>
+    <!-- Style en interne -->
+    <style>
+        header{
+            background: linear-gradient(to right, violet, rgb(53, 53, 180), rgb(81, 184, 219));
+        }
+	</style>
+</head>
+<!-- Fin de l'en-tete  -->
+
+<!-- Debut du contenu de la page -->
+<body>
+    <header class="header">
+        <!-- Headings -->
+        <h1 id="top"> Bienvenue dans ce bootcamp  </h1>
+        <h2 id="top2"> Ce bootcamp est parfait pour apprendere a maitriser
+            les technologies importantes du WEB.  </h2>
+        <button> Voir Plus</button>
+    </header>
+
+    <!-- Barre de Navigation -->
+    <nav>
+        <a href="#accueil">Accueil</a> |
+        <a href="#projets">Projets</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+    <!-- Barre laterale -->
+    <aside>
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML Documentation</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS Documentation</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank">W3Schools Tutorials</a></li>
+        </ul>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="bg-blue container">
+        <img id="voiture" src="https://img.freepik.com/vecteurs-premium/icone-voiture-illustration-vectorielle_710508-258.jpg" alt="" srcset="">
+        <!-- La section A propos -->
+        <h2 class="titre-centre"> A propos</h2>
+        <section id="a_propos">
+            <img id="image_buddha" src="https://t3.ftcdn.net/jpg/07/87/42/52/240_F_787425268_2Dw3lbGHnytJKzOber4MvtiwzmPJI9TM.jpg">
+            <!-- Les paragraphes -->
+            <p class="first_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+            <!-- <img src="image1.jpg" alt="Beau ciel papillons"> -->
+        </section>
+
+        <!-- Section projets avec images -->
+        <section id="projets">
+            <h2 class="titre-centre">Projets</h2>
+            <div id="projects2">
+                <article>
+                    <h3>Image Gallery</h3>
+                    <img class="project_images" src="https://imgs.search.brave.com/QeyG-i-HlQQJNe99YbxDtA5Fe4M5TlJ6wqFAFRCAaIM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9raW5z/dGEuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIwLzA1L3Jv/Ym8tZTE1ODQ3NDE1/NjM3MzQtMS5qcGc" alt="">
+                    <p>Create an interactive image gallery using HTML and CSS to showcase your favorite photos.</p>
+                </article>
+                <article>
+                    <h3>Timer</h3>
+                    <img class="project_images" src="https://imgs.search.brave.com/tlEMIUtNTDLm2uEMt38XwHyh8vjaddyI9MS7yhraQI4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjAz/NTkyMTgwL3Bob3Rv/L3RpbWVyLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1JcVhV/QS1lNFZZRXJNbVM5/ZzBzOXh0U215OU5T/VU5TWWxzRlZsY182/aGk0PQ" alt="">
+                    <p>Build a functional timer with start, stop, and reset capabilities using JavaScript.</p>
+                </article>
+                <article>
+                    <h3>Portfolio</h3>
+                    <img class="project_images" src="https://imgs.search.brave.com/Tzkd8u49bRXHZo9nVFjj8N1yqHtpZZcxKGKmXuXYL9w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aG9zdGluZ2VyLmNv/bS90dXRvcmlhbHMv/d3AtY29udGVudC91/cGxvYWRzL3NpdGVz/LzIvMjAyMy8wMy9I/b3ctdG8tTWFrZS1h/LVBvcnRmb2xpby1p/bi04LVN0ZXBzLVRp/cHMtdG8tQXR0cmFj/dC1Nb3JlLUNsaWVu/dHMtMTUzNng4OTQt/MS5wbmc" alt="">
+                    <p>Build your professional portfolio with HTML CSS.</p>
+                </article>
+            </div>
+        </section>
+        <!-- Section Projets Test elements HTML -->
+        <section class="hide">
+            <h3 class="center_titles"> Ma liste de courses</h3>
+            <!-- Les listes ordonnees -->
+                <ol>
+                <li> De l'eau</li> 
+                <li>Des fruits </li>
+                <li>Du lait</li>
+                </ol>
+
+                <!-- Les listes sans ordre -->
+                To do:
+                <ul>
+                    <li> Learn HTML</li>
+                    <li>Learn CSS </li>
+                    <li> Try a code </li>
+                </ul>
+                <br> 
+        </section>
+        <!-- Les liens -->
+        <a href="https://www.geonov.fr/architecture-client-serveur/" 
+            target="_blank" 
+        >More about architecture-client-serveur</a>
+
+        <!-- Section Table -->
+        <h2>Titre de ma table</h2>
+        <table>
+                <!-- En-tete du tableau -->
+                <tr>
+                    <th colspan="2">Themes</th>
+                    <th> Langages principaux</th>
+                    <th rowspan="2">Frameworks</th>
+                </tr>
+                <!-- Les donnees du tableau-->
+                <tr >
+                    <td> Developpement back-end</td>
+                    <td>Python</td>
+                    <td>Django</td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td> Analyse de donnees</td>
+                        <td>Python</td>
+                        <td>PowerBI</td>
+                    </tr>
+                </tr>
+                    <td> Developpement front-end</td>
+                    <td>HTML</td>
+                    <td>JQuery</td>
+                </tr>
+        </table>
+
+        <div class="premier_div">
+                <div>
+                    <h4>Test</h4>
+                    <p>Lorem ipsum ergo truc</p>
+                    <div>
+                        <p>Hey je suis le paragraphe le plus interne</p>
+                    </div>
+                </div>
+                <div></div>
+        </div>
+        <!-- LA section Contact -->
+        <h2 class="titre-centre">Contactez-nous</h2>
+        <section id="contact">
+                <form action="/process_formulaire" method="GET" style="display: grid; padding: 0 8em;">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" ><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" value="Doe"><br>
+                    Choisis ton language favoris:
+                    <input type="radio" id="html" name="fav_language" value="HTML" checked>
+                    <label for="html">HTML</label>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">CSS</label><br>
+                    Quel(s) langages aimeriez vous maitriser ?
+                    <input type="checkbox" name="python" id="python"> Python 
+                    <input type="checkbox" name="java" id="java"> Java  <br>
+                    
+                    <label for="large_texte"> Ecris ton message: </label>
+                    <textarea id="my_text" name="my_text" rows="4"> </textarea><br>
+                    
+                    <label for="favcolor">Select your favorite color:</label> 
+                    <input type="color" id="favcolor" name="favcolor"> <br>
+                    
+                    <label for="quantity">Quantity (between 1 and 5):</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="50"> <br>
+                
+                    <label for="datemax">Enter a date before 1980-01-01:</label>
+                    <input type="date" id="datemax" name="datemax" max="1979-12-31"><br>
+                    <label for="my_file">Choisis un fichier</label>
+                    <input type="file" id="" name=""><br>
+                    <input class="submit_button" type="submit" value="Envoyer">
+                </form>               
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Front-End Bootcamp. All rights reserved.</p>
+            <p><a href="#top">Back to top</a></p>
+        </div>
+    </footer>
+
+</body>
+<!-- Fin du contenu de la page -->
+
+</html>
