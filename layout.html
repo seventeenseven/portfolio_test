@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+        .container{
+            /* Etape 1: Initialisation du grid*/
+            display: grid;
+            height: 50vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 30% 50% 20% ;
+            grid-template-areas: 
+                "h h h s"
+                "m m . s "
+                "f f f s"
+            ;
+        }
+        .header{
+            background-color: orange;
+            grid-area: h
+        }
+        .main{
+            background-color: lightseagreen;
+            grid-area: m
+        }
+        .sidebar{
+            background-color: brown;
+            grid-area: s
+        }
+        .footer{
+            background-color: greenyellow;
+            grid-area: f
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">x</div>
+        <div class="main">x</div>
+        <div class="sidebar">x</div>
+        <div class="footer">x</div>
+    </div>
+</body>
+</html>

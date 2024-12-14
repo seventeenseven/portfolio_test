@@ -1,0 +1,274 @@
+/* Selectionner un element html 
+
+selection{ regle_css: valeur}
+
+1- Balise html
+nom_de_la_balise{}
+*/
+/* Reset pour assurer la compatibilité cross-browser */
+* {
+    margin: 0; /* Supprime les marges par défaut des navigateurs */
+    padding: 0; /* Supprime les espaces internes par défaut */
+    box-sizing: border-box; /* Inclut padding et bordures dans les dimensions des éléments */
+}
+
+/* Style global */
+body {
+    font-family: Arial, sans-serif; /* Police générale de la page */
+    line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+    color: #333; /* Couleur principale du texte */
+    background-color: #f9f9f9; /* Couleur de fond légèrement grise */
+    margin: 0; /* Supprime les marges extérieures */
+    padding: 0; /* Supprime les espaces internes */
+}
+
+/* En-tete */
+header {
+    background: linear-gradient(to right, violet, #4facfe, #00f2fe); /* Dégradé pour l'arrière-plan */
+    color: white; /* Couleur blanche pour le texte */
+    padding: 20px 0; /* Espace interne en haut et en bas */
+    text-align: center; /* Centre le texte */
+    min-width: 400px;
+}
+
+header h1 {
+    font-size: 2.3rem; /* Taille du titre principal */
+    margin-bottom: 10px; /* Espace sous le titre */
+}
+
+header h2 {
+    font-size: 1em; /* Taille du sous-titre */
+}
+
+/* Navigation */
+nav {
+    background-color: #333; /* Couleur de fond sombre */
+    color: white; /* Texte blanc */
+    padding: 10px; /* Espace interne */
+    display: flex; /* Affiche les éléments sur une ligne */
+    justify-content: center; /* Centre les liens */
+    gap: 15px; /* Espacement horizontal entre les éléments */
+}
+ /* Les selecteurs combines - CSS Avances
+ 1- Selectionner les elements a l'interieur d'un autre
+ balise_parent balise_enfant{propiete_css: valeur}
+ */
+ /* 1- Selecteurs descendants*/
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 10s ease-in;
+}
+
+#voiture{
+    width: 100px;
+    position: absolute;
+    left:0;
+    animation: move;
+    animation-duration: 8s;
+}
+
+/* Creation d'animation*/
+/* Cette animation deplace un element de gauche a droite*/
+@keyframes move {
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }  
+}
+
+button, .submit_button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 1s ease, transform 3s ease;
+}
+    
+button:hover {
+    background-color: green;
+    transform: scale(1.1); /* Légère augmentation de la taille */
+}
+
+.premier_div div{
+    color: #00f2fe;
+}
+/* 2-Selecteurs descendance direct*/
+.premier_div > div{
+    color: red;
+}
+/* 3- Selecteurs elements adjacents*/
+h4 + p{
+    color:bisque;
+}
+/* 4- Pseudo-classe */
+nav a:hover{
+    background-color: #fff;
+    color: #000;
+}
+/* Selectionner un element html 
+2- Par sa Classe 
+.nom_de_la_classe{}
+*/
+.first_paragraph{
+    color:darkblue;
+    margin-top: 100px;
+    margin-right: 40px;
+}
+
+#a_propos{
+    display:flex;
+}
+
+.center_titles{
+    text-align: center;
+    text-transform: uppercase;
+}
+/* Listes */
+ol, ul {
+    margin: 15px 0; /* Espacement vertical autour des listes */
+    padding-left: 20px; /* Décalage intérieur pour les éléments */
+}
+
+li {
+    margin-bottom: 10px; /* Espacement sous chaque élément de liste */
+}
+
+/* Contenu principal */
+main {
+    max-width: 1200px; /* Largeur maximale de la section principale */
+    margin: 20px auto; /* Centre le contenu avec des marges extérieures */
+    background: white; /* Fond blanc pour contraster avec l'arrière-plan général */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden; /* Assure que le contenu ne dépasse pas les limites */
+}
+
+/* Contenu lateral*/
+aside {
+    width: 25%; /* Aside occupe 25% de l'espace */
+    float: right; /* Positionne aside à gauche */
+    background-color: #f4f4f4; /* Fond gris clair */
+    padding: 15px; /* Espace interne */
+    border-radius: 8px; /* Coins arrondis */
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+aside a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+main h3 {
+    margin-bottom: 10px; /* Espace sous les titres */
+    color: #4facfe; /* Couleur bleu vif pour les titres */
+}
+
+main p {
+    margin-bottom: 15px; /* Espace sous chaque paragraphe */
+    text-align: justify; /* Alignement justifié pour une meilleure lecture */
+}
+main img {
+    max-width: 100%; /* L'image ne dépasse pas la largeur de son conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+}
+
+/* Les sections */
+section{
+margin-bottom: 40px;
+}
+.titre-centre{
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#projets{
+    margin-top: 20px; /* Espacement au-dessus de la section */
+    background-color: #d1dfeb; /* Fond bleu clair harmonieux */
+}
+/* Flexbox pour les projets */
+#projects2 {
+    display: flex; /* Active le modèle flexbox */
+    gap: 20px; /* Espacement entre les éléments */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    justify-content: center; /* Centre les éléments horizontalement */
+    padding: 40px; /* Espace interne */
+}
+
+#projects2 article {
+    flex: 1 1 calc(33.33% - 20px); /* Taille flexible avec une base minimale et espace entre les projets */
+    padding: 15px; /* Espace interne */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    text-align: center; /* Centre le contenu à l'intérieur */
+    background-color: #f9f9f9; /* Fond gris clair */
+}
+
+#projects2 article img {
+    max-width: 100%; /* Image responsive */
+    border-radius: 8px; /* Coins arrondis */
+    margin-bottom: 10px; /* Espacement sous l'image */
+    height: 60%;
+}
+#projects2 article p{
+    font-size: 1em;
+}
+/* Selectionner un element html 
+2- Par son id 
+#valeur_de_l_id{}
+*/
+#top{
+    color:rgb(5, 6, 60);
+}
+
+#contact{
+    margin-bottom: 10px;
+}
+
+table{
+    /* border-size, border-type, border-color*/
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px double black;
+    padding: 10px;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333; /* Fond sombre */
+    color: white; /* Texte blanc */
+    text-align: center; /* Centre le texte */
+    padding: 10px 0; /* Espace interne */
+    margin-top: auto; /* Pousse le footer en bas */
+    
+}
+
+footer a {
+    color: #00f2fe; /* Couleur bleue pour les liens */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+@media (max-width: 768px) {
+    body {
+        width:100%;
+    }
+    header{
+
+    }
+    main{
+        width: 90%;
+    }
+    aside{
+        display: none;
+    }
+}
